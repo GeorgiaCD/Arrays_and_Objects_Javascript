@@ -63,25 +63,23 @@ console.log(northernIrelandKeys);
  * Q4. Use an if statement to compare the population of Scotland to the other countries and print out if it is the biggest, smallest or somewhere in the middle.
  */
 
+// assign the index of the country 
 scotlandIndex = unitedKingdom.findIndex( country => country.name == "Scotland");
 englandIndex = unitedKingdom.findIndex( country => country.name == "England");
 walesIndex = unitedKingdom.findIndex( country => country.name == "Northern Ireland");
 northernIrelandIndex = unitedKingdom.findIndex( country => country.name == "Northern Ireland");
 
+// assign the country variables to their object in the array
 scotland = unitedKingdom[scotlandIndex];
 england = unitedKingdom[englandIndex];
 wales = unitedKingdom[walesIndex];
 northernIreland = unitedKingdom[northernIrelandIndex];
 
 // find the extremities 
-
 let maxPop = Math.max(...unitedKingdom.map(country => country.population));
 let minPop = Math.min(...unitedKingdom.map(country => country.population));
 
-// console.log(maxPop);
-// console.log(minPop);
-// console.log(scotland.population);
-
+// if statement 
 if(scotland.population == minPop){
   console.log("Scotland has the smallest population");
 } if(scotland.population == maxPop){
@@ -90,6 +88,7 @@ if(scotland.population == minPop){
   console.log("Scotland population is somewhere in the middle");
 }
 
+// print out to check
 console.log(`The max population is: `, maxPop);
 console.log(`The min population is: `, minPop);
 console.log(`Scolands population is: `, scotland.population);
