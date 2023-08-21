@@ -32,17 +32,22 @@ unitedKingdom = [
  * Q1. Add some tourist attractions to England
  */
 
-england = null;
+unitedKingdom[1].touristAttractions = ["London Eye", "Big Ben", "The Shard"];
 
-// console.log(england);
+// console.log(unitedKingdom);
+console.log(unitedKingdom[1]);
 
 /**
  * Q2. Change the capital of Wales to "Cardiff"
  */
 
-wales = null;
+// find the index of wales 
+// unitedKingdom[2] 
+walesIndex = unitedKingdom.findIndex( country => country.name == "Wales");
+wales = unitedKingdom[walesIndex];
 
-// console.log(wales);
+wales.capital = "Cardiff";
+console.log(wales);
 
 /**
  * Q3. Find a method in the documentation which will give you all of the available keys for Northern Ireland
